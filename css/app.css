@@ -1,0 +1,117 @@
+/*****  Site Colors  *****
+Udacity: #02b3e4;
+text: #2d3c49;
+border: #7d97ad;
+*/
+
+
+/*****  Body Styling  *****/
+.body {
+  font-family: 'Quicksand', sans-serif,'Old Standard TT', 'Open Sans';
+}
+
+
+/*****  Header Styling  *****/
+/* Style the header with bottom border and padding */
+.header {
+  font-size-adjust: auto;
+  justify-content:center;
+  padding: 10px 10px;
+  border-bottom: 4px solid #7d97ad;
+}
+
+.logo {
+  width: auto;
+  display: inline-block;
+}
+
+/* Move my name to the right and float for future background */
+.header-right {
+  float: right;
+  text-align: right;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 2.5em;
+  color: #02b3e4;
+  margin-bottom: -.50em;
+  }
+
+.role {
+  font-size: .95em;
+  color: #2d3c49;
+  }
+
+
+/*****  Main Styling  *****/
+.display {
+    width: 100%;
+    height: auto;
+    padding: 10px 0px 10px 0px;
+ }
+
+
+
+
+
+
+/*****  Section Styling  *****/
+.section_title {
+  font-size: 2.0em;
+  color: #7d97ad;
+}
+
+
+
+/*****  Container Grid Styling  *****/
+.container {
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****  Footer  *****/
+.linkedin {
+}
+
+/*****  Responsive Design  *****
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header {
+    float: right;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: right;
+  }
+}
+
+@media (min-width: 1000px) {
+    .page-header {
+        min-height: 35vh;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    main {
+        flex: 1 1 70%;
+    }
