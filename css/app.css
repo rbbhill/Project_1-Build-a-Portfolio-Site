@@ -59,42 +59,52 @@ p.role {
 
 /*****  Section Styling  *****/
 .section_title {
-  font-size: 2.0em;
+  font-size: 1.5em;
   color: #7d97ad;
 }
 
 
 /*****  Container Grid Styling  *****/
 .container {
-    box-sizing: border-box;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-rows: repeat(1, 250px);
+    padding-bottom: 10px;
     border-bottom: 4px solid #7d97ad;
-  }
+    text-align:;
+
+}
+
 
 
 .grid-1 {
-    display: grid;
-    width: auto;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    grid-gap: 40px;
-    padding: 10px 0px 10px 0px;
+
   }
 
-  .grid-1 div {
+.grid-1 div {
 
-    color: white;
-    font-size: 20px;
-    padding: 150px;
   }
 
   .item-1 {
+overflow-wrap: normal;
 
   }
   .item-2 {
+    overflow-wrap: normal;
   }
   .item-3 {
+    overflow-wrap: normal;
   }
 
+  .grid {
+    align-items: stretch;
+  }
+
+  .griditem {
+    display: flex;
+    align-items: center;
+  }
 
 
 
@@ -112,27 +122,13 @@ p.role {
 
 /*****  Responsive Design  *****
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 300px) {
-  .header {
-    float: right;
-    display: block;
-    text-align: left;
-  }
-  .header-right {
-    float: right;
+@media (min-width: 600px) {
+  .gridcontainer {
+  grid-template-columns: repeat(3, 1fr); /* I have added extra columns at larger screen sizes!! */
   }
 }
-
-@media (min-width: 1000px) {
-    .page-header {
-        min-height: 35vh;
-    }
-
-    .container {
-      display: flex;
-    }
-
-    main {
-      flex: 1 1 100%;
-    }
+@media (max-width: 1200px) {
+  .gridcontainer {
+  grid-template-columns: repeat(3, 1fr); /* I have added extra columns at larger screen sizes!! */
+  }
 }
